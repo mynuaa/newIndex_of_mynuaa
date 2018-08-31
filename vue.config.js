@@ -3,7 +3,7 @@ module.exports = {
         open: true,
     },
 
-    baseUrl: './',
+    baseUrl: '/',
     productionSourceMap: false,
 
     css: {
