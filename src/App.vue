@@ -1,7 +1,8 @@
 <template>
     <div id="root">
         <Header />
-        <Body/>
+        <hr />
+        <Body />
         <Footer />
     </div>
 </template>
@@ -48,6 +49,13 @@ export default {
 }
 .footer{
     flex: 1;
+}
+hr{
+    border: 0;
+    border-bottom: 1px solid lightgray;
+    margin-top: -14px;
+    width: 60%;
+    margin-left: 24%;
 }
 </style>
 
