@@ -1,6 +1,9 @@
 <template>
     <div class="header">
-        <a href="/" class="logo"></a>
+        <!--<a href="/" class="logo"></a>-->
+        <div class="logoFrame"  v-bind:class="{ swing : isselected }"> 
+            <img class="logo" @mouseover="select" src="../assets/logo.png">
+        </div>
         <!--<a href="/">预约维修</a>-->
         <a href="/xiaohongmao">小红帽</a>
         <a href="/evaluation">五四评优</a>
@@ -17,7 +20,29 @@ export default {
     props: {
 
     },
+    data(){
+        return{
+            navitem:[
+                {title:"维修预约",mark:"repair",url:''},
+                {title:"小红帽",mark:"xhm",url:'http://my.nuaa.edu.cn/xiaohongmao'},
+                {title:"五四评优",mark:"wspy",url:'http://my.nuaa.edu.cn/evaluation'},
+                {title:"办公系统",mark:"workshop",url:''},
+                {title:"南航mall",mark:"mall",url:'http://my.nuaa.edu.cn/mall'},
+                {title:"南航bottle",mark:"bottle",url:'http://my.nuaa.edu.cn/bottle'}
+                ],
+            
+            isselected: false,
+            }
+        },
     methods: {
+        select (event){
+            if (window.outerWidth > 640){
+                this.isselected = true
+            }
+            setTimeout(() => {
+                this.isselected = false
+            }, 1500);
+        }
     }
 }
 </script>
@@ -56,6 +81,50 @@ export default {
         }
     }
 
+    .logoFrame{
+        //display: flex;
+        padding: 5px 0 0 6px;
+        //margin:  25px 0 0 calc(50% - 480px);
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        box-shadow: 0px 0px 5px 0.5px grey;
+        background-color: #fff;
+        z-index: 999;
+    }
+    .logo{
+        width: 80px;
+        height: 80px;
+    }
+
+    @keyframes swing {
+        20% {
+            transform: rotate3d(0, 0, 1, 15deg);
+        }
+
+        40% {
+            transform: rotate3d(0, 0, 1, -10deg);
+        }
+
+        60% {
+            transform: rotate3d(0, 0, 1, 5deg);
+        }
+
+        80% {
+            transform: rotate3d(0, 0, 1, -5deg);
+        }
+
+        to {
+            transform: rotate3d(0, 0, 1, 0deg);
+        }
+    }
+
+        .swing {
+        -webkit-transform-origin: top center;
+        transform-origin: top center;
+        animation: swing 1500ms linear;
+        }
+/*
     .logo{
         height: 100%;
         background-image: url('../assets/logo.png');
@@ -76,6 +145,7 @@ export default {
             //font-size: 0.9rem;
         }
     }
+*/
 
 
 }
