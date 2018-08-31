@@ -1,9 +1,11 @@
 <template>
     <div class="header">
         <!--<a href="/" class="logo"></a>-->
-        <div class="logoFrame"  v-bind:class="{ swing : isselected }"> 
-            <img class="logo" @mouseover="select" src="../assets/logo.png">
-        </div>
+        <a class="logowrap" href="/">
+            <div class="logoFrame"  v-bind:class="{ swing : isselected }"> 
+                <img class="logo" @mouseover="select" src="../assets/logo.png">
+            </div>
+        </a>
         <!--<a href="/">预约维修</a>-->
         <a href="/xiaohongmao">小红帽</a>
         <a href="/evaluation">五四评优</a>
@@ -82,7 +84,6 @@ export default {
     }
 
     .logoFrame{
-        //display: flex;
         padding: 5px 0 0 6px;
         //margin:  25px 0 0 calc(50% - 480px);
         width: 80px;
@@ -95,6 +96,13 @@ export default {
     .logo{
         width: 80px;
         height: 80px;
+    }
+    .logowrap{
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: 2rem;
     }
 
     @keyframes swing {
