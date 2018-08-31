@@ -1,0 +1,20 @@
+body{
+    height: 100%;
+}
+html{
+    font-size: 16px;
+}
+@media screen and (max-width:640px){
+    html{
+        font-size: 12px;
+    }
+}
+
+a{
+    $main: black;
+    text-decoration: none;
+
+    &:visited, &:link{
+        color: $main;
+    }
+}
