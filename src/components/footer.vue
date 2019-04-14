@@ -23,7 +23,7 @@
             </a>
         </div>
 
-        <div class="copyright">© 2008-2018 纸飞机南航青年网络社区 ( 苏ICP备05070685号-1 )</div>
+        <div class="copyright">© 2008-{{thisYear}} 纸飞机南航青年网络社区 ( 苏ICP备05070685号-1 )</div>
 
     </div>
 </template>
@@ -34,6 +34,14 @@ export default {
     name: 'Footer',
     props: {
 
+    },
+    data(){
+        return{
+            
+        }
+    },
+    computed: {
+        thisYear: () => new Date().getFullYear()
     },
     methods: {
     }

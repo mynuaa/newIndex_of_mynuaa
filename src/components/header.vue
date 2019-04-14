@@ -9,7 +9,7 @@
         <!--<a href="/">预约维修</a>-->
         <a href="/xiaohongmao">小红帽</a>
         <a href="/evaluation">五四评优</a>
-        <a href="/blog">技术博客</a>
+        <a href="/bottle">南航bottle</a>
         <a href="/office">办公系统</a>
         <a href="/sso/?page=login&redirect_uri=L3hpYW9ob25nbWFvL2luZGV4LnBocA==" class="login">登录<br>login</a>
     </div>
