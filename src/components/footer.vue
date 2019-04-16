@@ -54,6 +54,7 @@ console.log('%c', 'background:url(https://qzonestyle.gtimg.cn/qzone/em/e253.png)
 
 console.log('%c如果有小可爱看到这个 可以投递简历到yuwenjie66#126.com哦 欢迎来纸飞机一起玩呀~', 'font-size:14px;font-family:"PingFang SC",微软雅黑,"WenQuanYi Micro Hei"')
     var _hmt = _hmt || [];
+    
     (function() {
         var hm = document.createElement("script")
         hm.src = "https://hm.baidu.com/hm.js?f7c0295778ddd27005fadba73644ae21"
